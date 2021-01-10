@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/GalBaronTest.unity
+- path: Assets/cohiRoom.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

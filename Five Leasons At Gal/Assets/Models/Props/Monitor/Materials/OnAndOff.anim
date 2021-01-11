@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.06666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -49,7 +49,7 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 2100000, guid: 398a14814ff3aaf4da5f77e104ec1d2d, type: 2}
-    - time: 0.38333333
+    - time: 0.06666667
       value: {fileID: 2100000, guid: 665e84344a6ea124f99cdaf8e5227da5, type: 2}
     attribute: m_Materials.Array.data[0]
     path: Cube.001
@@ -84,7 +84,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.083333336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -113,7 +113,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.06666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity

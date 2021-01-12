@@ -7,9 +7,11 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     public GameObject currentCam;
     private int camId;
+   
+    public GameObject Player;
     void Awake()
     {
-        
+       
         gameCams = GetComponent<GameManager>().GetCameras();
         for (int i = 0; i < gameCams.Length; i++)
         {
@@ -17,9 +19,25 @@ public class CameraController : MonoBehaviour
             {
                 camId = i;
             }
+            gameCams[i].GetComponent<Camera>().enabled = false;
         }
     }
-   
+    public void switchMainCameraToGameCam(GameObject cameraToDisable,int camIdToEnable)
+    {
+            cameraToDisable.GetComponent<Camera>().enabled = false;
+            Player = cameraToDisable;
+            gameCams[camIdToEnable].GetComponent<Camera>().enabled = true;
+            camId = camIdToEnable;
+            
+    }
+    public void switchGameCameraToMainCam()
+    {
+            Player.GetComponent<Camera>().enabled = true;
+           
+            gameCams[camId].GetComponent<Camera>().enabled = false;
+            Player.GetComponent<Controller>().camId = camId;
+            
+    }
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +56,7 @@ public class CameraController : MonoBehaviour
                     gameCams[camId + 1].GetComponent<Camera>().enabled = true;
                     camId += 1;
                     Debug.Log("right");
+                    
                 }
                 break;
             case "a":
@@ -49,7 +68,12 @@ public class CameraController : MonoBehaviour
                     gameCams[camId - 1].GetComponent<Camera>().enabled = true;
                     camId -= 1;
                     Debug.Log("left");
+                    
                 }
+                break;
+            case "z":
+            case "Z":
+                switchGameCameraToMainCam();
                 break;
         }
        
